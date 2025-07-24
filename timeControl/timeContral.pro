@@ -3,7 +3,7 @@ QT += gui widgets
 TEMPLATE = lib
 DEFINES += TIMECONTRAL_LIBRARY
 
-CONFIG += c++17
+CONFIG += c++17 dll
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -21,3 +21,6 @@ unix {
     target.path = /usr/lib
 }
 !isEmpty(target.path): INSTALLS += target
+
+# 设置输出目录
+DESTDIR = $$PWD/bin

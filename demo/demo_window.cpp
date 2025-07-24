@@ -12,9 +12,10 @@ DemoWindow::DemoWindow(QWidget *parent)
     setMinimumSize(800, 200);
     resize(1000, 200);
     
-    // 设置窗口透明背景
+    // 设置窗口半透明背景，保留标题栏
     setAttribute(Qt::WA_TranslucentBackground);
-    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    // 保留标题栏，移除FramelessWindowHint，保留WindowStaysOnTopHint
+    setWindowFlags(Qt::WindowStaysOnTopHint);
     
     setupUI();
     setupTimeContral();

@@ -447,7 +447,7 @@ void TimeContral::drawTimeScale(QPainter &painter)
                 // 绘制时间文本，格式为 hh:00
                 QString timeText = QString("%1:00").arg(hour, 2, 10, QChar('0'));
                 QFontMetrics fm(font);
-                int textWidth = fm.horizontalAdvance(timeText);
+                int textWidth = fm.width(timeText);
                 painter.drawText(x - textWidth/2, scaleY + 20, timeText);
             } else {
                 // 小刻度（每小时）
@@ -549,7 +549,7 @@ void TimeContral::drawTimeBubble(QPainter &painter)
     painter.setFont(font);
     
     QFontMetrics fm(font);
-    int textWidth = fm.horizontalAdvance(text) + 20;
+    int textWidth = fm.width(text) + 20;
     int bubbleWidth = textWidth;
     int bubbleHeight = 30;
     
@@ -606,7 +606,7 @@ void TimeContral::drawDateOnTimeline(QPainter &painter)
     
     QString dateText = midTime.toString("yyyy-MM-dd");
     QFontMetrics fm(font);
-    int textWidth = fm.horizontalAdvance(dateText);
+    int textWidth = fm.width(dateText);
     
     // 在时间轴底部绘制日期
     painter.drawText((width() - textWidth)/2, height() - 10, dateText);

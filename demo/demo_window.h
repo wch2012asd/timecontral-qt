@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <QVBoxLayout>
 #include "timecontral.h"
-
 /**
  * @brief TimeContral控件的简单演示窗口
  */
